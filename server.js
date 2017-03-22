@@ -43,7 +43,7 @@ app.get("/", function(request, response){
 
   response.render("home.hbs",{
 
-    page: "Home",
+    pageTitle: "Home",
     message: "Welcome to my nightmare!",
 
   })
@@ -57,6 +57,21 @@ app.get("/about", function(request,response){
 
   });
 
+});
+
+app.get("/projects", function(request, response){
+
+  response.render("projects.hbs", {
+    pageTitle: "Projects"
+  });
+});
+
+app.get("/history", function(request, response){
+
+  response.render("history.hbs", {
+    pageTitle: "History",
+    message: "OIIIIIIIIIIIIIIIIIIIII"
+  });
 });
 
 app.get("/bad", function(request,response){
